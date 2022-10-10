@@ -2,7 +2,8 @@ const express = require("express");
 const port =3003;
 const app = new express();
 const middleware = require('./middleware');
-const server = app.listen(port,() =>console.log("server listening to port:"+ port));
+// can also define the arrow function outside and call it
+const server = app.listen(port, () => console.log("Server is listening to port: " + port));
 app.set("view engine","pug");
 app.set("views","views");
 
