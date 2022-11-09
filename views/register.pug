@@ -1,0 +1,27 @@
+extends layouts/login-layout
+block content
+    .loginContainer
+        h1 Register
+        form#regform(method = "post", onsubmit="event.preventDefault(); confirmation();" )
+            input(type="text", name="firstname", placeholder="FirstName", required="")
+            input(type="text", name="lastname", placeholder="LastName", required="")
+            input(type="text", name="newusername", placeholder="New Username", required="")
+            input(type="email", name="email", placeholder="New Email",required="")
+    
+            input#password(type="password", name="password", placeholder="Passcode", required="")
+            input#conpassword(type="password", name="conpassword", placeholder="Confirm Passcode", required="")
+            input(type="submit", value="submit")
+        a(href = "/login") Already have an Account? Login here.
+    script.
+        var passcode = document.getElementById("password");
+        var conpasscode = document.getElementById("conpassword");
+        var form = document.getElementById("regform");
+
+        function confirmation(){
+        if(passcode.value != conpasscode.value){
+        alert("Password doesn't match. Try again.");
+        }
+        else{
+        form.submit();
+        }
+        }
