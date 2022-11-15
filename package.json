@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/Sandeshpokhrel/My_Tweet#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "express": "^4.17.2",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.2",
     "pug": "^3.0.2"
   }
 }

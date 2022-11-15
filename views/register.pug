@@ -2,11 +2,12 @@ extends layouts/login-layout
 block content
     .loginContainer
         h1 Register
-        form#regform(method = "post", onsubmit="event.preventDefault(); confirmation();" )
-            input(type="text", name="firstname", placeholder="FirstName", required="")
-            input(type="text", name="lastname", placeholder="LastName", required="")
-            input(type="text", name="newusername", placeholder="New Username", required="")
-            input(type="email", name="email", placeholder="New Email",required="")
+        p.errorMessage #{errorMessage}
+        form#regform(method = "post", onsubmit="event.preventDefault(); Pconfirmation();" )
+            input(type="text", name="firstname", placeholder="FirstName", value = firstname, required="")
+            input(type="text", name="lastname", placeholder="LastName", value = lastname, required="")
+            input(type="text", name="newusername", placeholder="New Username", value = newusername, required="")
+            input(type="email", name="email", placeholder="New Email", value = email, required="")
     
             input#password(type="password", name="password", placeholder="Passcode", required="")
             input#conpassword(type="password", name="conpassword", placeholder="Confirm Passcode", required="")
@@ -17,7 +18,7 @@ block content
         var conpasscode = document.getElementById("conpassword");
         var form = document.getElementById("regform");
 
-        function confirmation(){
+        function Pconfirmation(){
         if(passcode.value != conpasscode.value){
         alert("Password doesn't match. Try again.");
         }

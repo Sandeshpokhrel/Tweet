@@ -5,6 +5,8 @@ body {
 .wrapper {
     display: flex;
     font-family: system-ui;
+    justify-content: center;
+  
 }
 
 .loginContainer {
@@ -15,7 +17,7 @@ body {
     max-width: 500px;
     border: 1px solid lightgrey;
     background-color: white;
-    text-align: left;
+    text-align: center;
     box-shadow: 0 2px 4px 2px deepskyblue;
     -webkit-box-shadow: 0 2px 4px 2px deepskyblue;
     -moz-box-shadow: 0 2px 4px 2px deepskyblue;

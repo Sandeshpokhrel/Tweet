@@ -98,6 +98,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="Public\CSS\login.css" />
+    <None Include="Routes\registerRoute.js" />
+    <None Include="Schemas\UserSchema.js" />
+    <None Include="views\register.pug" />
+    <None Include="database.js" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
